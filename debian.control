@@ -1,0 +1,21 @@
+Priority: medium
+Maintainer: Ronan <ronan.lemartret@iot.bzh>
+Source: dsv2gshark
+Build-Depends:
+ debhelper (>= 5),
+ dpkg-dev,
+ pkg-config,
+ g++,
+ wireshark-dev,
+ liblua5.2-dev
+Standards-Version: 3.8.2
+Homepage: https://github.com/dspace-group/dsv2gshark
+
+Package: dsv2gshark
+Architecture: any
+Section: libs
+Priority: optional
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Wireshark plugin for EV/EVSE
+
