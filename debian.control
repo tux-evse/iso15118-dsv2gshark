@@ -17,5 +17,5 @@ Section: libs
 Priority: optional
 Multi-Arch: same
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Wireshark plugin for EV/EVSE
+Description: Wireshark plugin for iso15118 EV/EVSE
 

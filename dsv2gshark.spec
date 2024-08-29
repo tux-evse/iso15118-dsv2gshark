@@ -2,7 +2,7 @@ Name:           dsv2gshark
 Version:        1.3.0
 Release:        1%{?dist}
 License:        MIT
-Summary:        Wireshark plugin for EV/EVSE
+Summary:        Wireshark plugin for iso15118 EV/EVSE
 Url:            https://github.com/dspace-group/dsV2Gshark
 Source0:         %{name}-%{version}.tar.gz
 
