@@ -14,9 +14,9 @@ override_dh_auto_build:
 	@export LUAFLAGS="-I$$(pkg-config --variable=includedir lua52)/$$(pkg-config --variable=lib_name_include lua52)" ;cd V2G_Libraries;chmod a+x ./build_all_linux.sh;./build_all_linux.sh
 
 override_dh_auto_install:
-	@mkdir -p                                   /usr/src/packages/BUILD/debian/dsv2gshark/usr/lib64/wireshark/plugins/
+	@mkdir -p                                   /usr/src/packages/BUILD/debian/dsv2gshark/$$(dirname $$(pkg-config --variable=plugindir wireshark))
 	@mkdir -p                                   /usr/src/packages/BUILD/debian/dsv2gshark$$(pkg-config --variable=INSTALL_CMOD lua52)
-	@cp Wireshark/plugins/*                     /usr/src/packages/BUILD/debian/dsv2gshark/usr/lib64/wireshark/plugins/
+	@cp Wireshark/plugins/*                     /usr/src/packages/BUILD/debian/dsv2gshark/$$(dirname $$(pkg-config --variable=plugindir wireshark))
 	@cp ./V2G_Libraries/CertificateInfos/bin/*  /usr/src/packages/BUILD/debian/dsv2gshark$$(pkg-config --variable=INSTALL_CMOD lua52)
 	@cp ./V2G_Libraries/V2GDecoder/bin/*        /usr/src/packages/BUILD/debian/dsv2gshark$$(pkg-config --variable=INSTALL_CMOD lua52)
 
