@@ -54,8 +54,7 @@ LUA_CMOD=%{_libdir}/lua/%{LUA_VER}
 mkdir -p %{buildroot}%{_libdir}/wireshark/plugins/
 mkdir -p %{buildroot}${LUA_CMOD}
 cp Wireshark/plugins/*                    %{buildroot}%{_libdir}/wireshark/plugins/
-cp ./V2G_Libraries/CertificateInfos/bin/* %{buildroot}${LUA_CMOD}
-cp ./V2G_Libraries/V2GDecoder/bin/*       %{buildroot}${LUA_CMOD}
+cp ./V2G_Libraries/v2gLib/bin/*           %{buildroot}${LUA_CMOD}
 
 #---------------------------------------------
 %files
